@@ -1,6 +1,6 @@
 {
-  "name": "tsx-app",
-  "version": "0.1.0",
+  "name": "base-platform-fe",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/yanlele/tsx-app.git"
   },
-  "author": "",
+  "author": "https://github.com/yanlele",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yanlele/tsx-app/issues"
@@ -34,7 +34,7 @@
     "antd": "^3.13.6",
     "npm-check-updates": "^3.1.9"
   },
-  "homepage": "https://github.com/yanlele/tsx-app#readme",
+  "homepage": "https://github.com/demo-collection/base-platform-fe#readme",
   "devDependencies": {
     "@types/node": "^10.12.29",
     "antd": "^3.23.1",
