@@ -1,6 +1,6 @@
 import {axios} from '../utils';
 
-const getSceneInfo = (id: number) => {
+export const getSceneInfo = (id: number) => {
   return axios({
     url: '/api/paper',
     params: {
@@ -11,7 +11,7 @@ const getSceneInfo = (id: number) => {
     .catch((err: object) => err);
 };
 
-const proxyGithubApi = () => {
+export const proxyGithubApi = () => {
   return axios({
     url: '/api/users',
     method: 'post',

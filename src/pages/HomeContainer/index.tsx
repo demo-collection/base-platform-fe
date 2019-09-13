@@ -1,5 +1,6 @@
 import React, {ChangeEvent, FunctionComponent, useCallback, useEffect, useState} from 'react';
 import {connect} from 'react-redux';
+import {getSceneInfo} from '../../server';
 
 interface SelectItem {
   value: string;
@@ -9,7 +10,13 @@ interface SelectItem {
 const HomeContainer: FunctionComponent = () => {
   const [name, updateName] = useState<string>('');
 
+  const fetchInfo = async () => {
+    const info = await getSceneInfo(123);
+    console.log(info);
+  };
+
   useEffect(() => {
+    fetchInfo();
     console.log(name);
     return () => {
       console.log('componentWillUnmount');
