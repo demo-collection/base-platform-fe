@@ -1,7 +1,7 @@
-const path = require('path')
-const paths = require('./paths')
-const tsImportPluginFactory = require('ts-import-plugin')
-const CircularDependencyPlugin = require('circular-dependency-plugin')
+const path = require('path');
+const paths = require('./paths');
+const tsImportPluginFactory = require('ts-import-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
