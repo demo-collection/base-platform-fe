@@ -1,14 +1,15 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const ApiMocker = require('webpack-api-mocker2')
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ApiMocker = require('webpack-api-mocker2');
 
-const paths = require('./paths')
-const baseConfig = require('./webpack.config.base.js')
+const paths = require('./paths');
+const proxy = require('./proxy');
+const baseConfig = require('./webpack.config.base.js');
 
-const mockPath = path.resolve(__dirname, '../mock')
+const mockPath = path.resolve(__dirname, '../mock');
 
 module.exports = merge(baseConfig, {
     mode: 'development',
@@ -60,16 +61,7 @@ module.exports = merge(baseConfig, {
         before(app) {
             ApiMocker(app, mockPath)
         },
-        proxy: {
-            '/api': {
-                target: '',
-                changeOrigin: true,
-                pathRewrite: {
-                    '^/api': '/'
-                },
-                logLevel: 'debug',
-            },
-        },
+        // proxy: [proxy.mock],
         clientLogLevel: 'error',
         port: 3001,
         contentBase: paths.PATH_DIST,
