@@ -1,5 +1,12 @@
-## tsx-app
+## base-platform-fe
 
+
+### 基础平台管理demo-fe
+
+
+
+
+### 构建基础功能
 - [x] TypeScript 构建 react16 项目
 - [x] react-router4: 做配置化路由管理
 - [x] webpack4 + webpack-dev-server3
