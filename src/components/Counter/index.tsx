@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Button} from 'antd';
 
 interface CounterCheckProps {
   counter: number,
@@ -23,19 +22,19 @@ class Counter extends React.Component<CounterCheckProps, {}> {
     } = this.props;
     return (
       <div>
-        <Button onClick={onIncrement}>
+        <button onClick={onIncrement}>
               Increment
-        </Button>
-        <Button onClick={onDecrement}>
+        </button>
+        <button onClick={onDecrement}>
               Decrement
-        </Button>
-        <Button onClick={onIncrementAsync}>
+        </button>
+        <button onClick={onIncrementAsync}>
               IncrementAsync
-        </Button>
-        <Button onClick={onIncrementAsyncOnce}>
+        </button>
+        <button onClick={onIncrementAsyncOnce}>
               IncrementAsyncOnce
-        </Button>
-        <Button onClick={onProxyWeather}>代理方式获取iKcamp信息</Button>
+        </button>
+        <button onClick={onProxyWeather}>代理方式获取iKcamp信息</button>
         <hr />
         <div>Clicked: <span style={{ fontSize: '20px', color: 'red' }}> {counter} </span>times</div>
       </div>
