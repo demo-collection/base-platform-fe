@@ -1,6 +1,6 @@
-import React, {ChangeEvent, FunctionComponent, useCallback, useEffect, useState} from 'react';
-import {connect} from 'react-redux';
-import {getSceneInfo} from '../../server';
+import React, { ChangeEvent, FunctionComponent, useCallback, useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { getSceneInfo } from '../../server';
 
 interface SelectItem {
   value: string;
@@ -23,10 +23,12 @@ const HomeContainer: FunctionComponent = () => {
     };
   }, [name]);
 
-  const arr: SelectItem[] = [{
-    value: 'yanle',
-    id: 1,
-  }];
+  const arr: SelectItem[] = [
+    {
+      value: 'yanle',
+      id: 1,
+    },
+  ];
 
   const handleSelectChange = useCallback((event: ChangeEvent<HTMLSelectElement>) => {
     updateName(event.target.value.toString());
@@ -39,13 +41,16 @@ const HomeContainer: FunctionComponent = () => {
       <p>首页内容 ~ ^.^ ~</p>
       <button onClick={() => console.log('123')}>click</button>
       <button>你好</button>
-      <select style={{width: '300px'}}
-              onChange={handleSelectChange}>
-        {arr.map((item: any) => (<option key={item.value} value={item.id}>{item.value}</option>))}
+      <select style={{ width: '300px' }} onChange={handleSelectChange}>
+        {arr.map((item: any) => (
+          <option key={item.value} value={item.id}>
+            {item.value}
+          </option>
+        ))}
       </select>
 
-      <br/>
-      <input value={name} onChange={handleInputChange}/>
+      <br />
+      <input value={name} onChange={handleInputChange} />
     </div>
   );
 };

@@ -10,8 +10,8 @@ module.exports = {
     target: '',
     changeOrigin: true,
     pathRewrite: {
-      '^/api': '/'
+      '^/api': '/',
     },
     logLevel: 'debug',
-  }
+  },
 };
