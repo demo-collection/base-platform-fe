@@ -8,5 +8,6 @@
   "arrowParens": "avoid",
   "requirePragma": false,
   "proseWrap": "preserve",
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "ignore",
+  "tabWidth": 2
 }
