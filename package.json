@@ -36,7 +36,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": [
+    "**/*.{js,ts,tsx}": [
       "yarn prettier",
       "git add"
     ],
