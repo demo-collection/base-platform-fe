@@ -31,16 +31,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn type-check && lint-staged",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "**/*.{js,ts}": [
+    "**/*.{ts,tsx}": [
       "yarn prettier",
       "git add"
     ],
-    "**/*.{ts,spec.js}": [
+    "**/*.{ts,spec.js,tsx}": [
       "tslint --fix",
       "git add"
     ]
@@ -53,6 +53,9 @@
   },
   "homepage": "https://github.com/demo-collection/base-platform-fe#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/prompt-cli": "^7.5.0",
     "@types/node": "^10.12.29",
     "antd": "^3.23.1",
     "autoprefixer": "^9.1.0",
@@ -102,6 +105,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-loader": "^3.0.0",
     "poststylus": "^1.0.0",
+    "prettier-eslint-cli": "^5.0.0",
     "query-string": "^6.1.0",
     "rc-touchable": "^1.1.4",
     "react-css-modules": "^4.1.0",
